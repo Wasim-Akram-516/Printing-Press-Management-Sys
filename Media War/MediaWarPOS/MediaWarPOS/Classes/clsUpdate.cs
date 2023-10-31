@@ -226,7 +226,7 @@ namespace MediaWarPOS.Classes
             }
             return st;
         }
-        public static void UpdateCustomers(int customerID, string name, string phone1, string phone2, DateTime date, string workDetails)
+        public static void UpdateCustomers(int customerID, string name, string phone1, string phone2, DateTime date, string workDetails, decimal totalPrice, decimal paid, decimal remaining)
         {
             try
             {
@@ -239,6 +239,10 @@ namespace MediaWarPOS.Classes
                     com.Parameters.AddWithValue("@phone2", phone2);
                 com.Parameters.AddWithValue("@date", date);
                 com.Parameters.AddWithValue("@workDetails", workDetails);
+                com.Parameters.AddWithValue("@totalPrice", totalPrice);
+                com.Parameters.AddWithValue("@paid", paid);
+                com.Parameters.AddWithValue("@remaining", remaining);
+
                 clsMain.con.Open();
                 com.ExecuteNonQuery();
                 clsMain.con.Close();

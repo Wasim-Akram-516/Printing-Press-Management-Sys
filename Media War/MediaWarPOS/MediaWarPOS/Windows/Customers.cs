@@ -18,7 +18,9 @@ namespace MediaWarPOS.Windows
             InitializeComponent();
         }
         Regex rgPhone = new Regex("^[0-9]*$");
+        Regex rgNumber = new Regex("^[.?\\d]+$");
         int edit = 0, customerID;
+        decimal total, paid, remaining;
         private void Customers_Load(object sender, EventArgs e)
         {
             Classes.clsMain.DisableReset(pnlDetails);
@@ -58,12 +60,60 @@ namespace MediaWarPOS.Windows
         {
             Classes.clsMain.ShowErr(txtWorkDetails, errWorkDetails);
         }
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+            Classes.clsMain.ShowErr(txtTotal, errTotal);
+            if (txtTotal.Text != "")
+            {
+                if (!rgNumber.Match(txtTotal.Text).Success)
+                {
+                    txtTotal.Clear();
+                    txtTotal.Focus();
+                }
+                else
+                {
+                    calculateRemaining();
+                }
+            }
+            
+        }
+
+        private void txtPaid_TextChanged(object sender, EventArgs e)
+        {
+            Classes.clsMain.ShowErr(txtPaid, errPaid);
+            if (txtPaid.Text != "")
+            {
+                if (!rgNumber.Match(txtPaid.Text).Success)
+                {
+                    txtPaid.Clear();
+                    txtPaid.Focus();
+                }
+                else
+                {
+                    calculateRemaining();
+                }
+            }
+        }
+
+        private void txtRemaining_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+        private void calculateRemaining()
+        {
+            decimal.TryParse(txtTotal.Text, out total);
+            decimal.TryParse(txtPaid.Text, out paid);
+
+            remaining = total - paid;
+            txtRemaining.Text = remaining.ToString();
+        }
 
         public override void btnAdd_Click(object sender, EventArgs e)
         {
             edit = 0;
             Classes.clsMain.EnableReset(pnlDetails);
             txtName.Focus();
+            txtRemaining.Enabled = false;
         }
 
         public override void btnEdit_Click(object sender, EventArgs e)
@@ -71,25 +121,27 @@ namespace MediaWarPOS.Windows
             edit = 1;
             Classes.clsMain.Enable(pnlDetails);
             txtName.Focus();
+            txtRemaining.Enabled = false;
         }
 
         public override void btnSave_Click(object sender, EventArgs e)
         {
-            if (errName.Visible || errPhone1.Visible || errWorkDetails.Visible)
+            if (errName.Visible || errPhone1.Visible || errWorkDetails.Visible || errTotal.Visible || errPaid.Visible || errRemaining.Visible)
             {
                 Classes.clsMain.ShowMsg("Fields with * are mandatory!", "Error", "Error");
             }
             else
             {
+
                 if (edit == 0)
                 {
-                    Classes.clsInsert.InsertCustomers(txtName.Text, txtPhone1.Text, txtPhone2.Text,dtDate.Value,txtWorkDetails.Text);
+                    Classes.clsInsert.InsertCustomers(txtName.Text, txtPhone1.Text, txtPhone2.Text,dtDate.Value,txtWorkDetails.Text,total,paid,remaining);
                     LoadData();
                     Classes.clsMain.DisableReset(pnlDetails);
                 }
                 else if (edit == 1)
                 {
-                    Classes.clsUpdate.UpdateCustomers(customerID,txtName.Text, txtPhone1.Text, txtPhone2.Text, dtDate.Value, txtWorkDetails.Text);
+                    Classes.clsUpdate.UpdateCustomers(customerID,txtName.Text, txtPhone1.Text, txtPhone2.Text, dtDate.Value, txtWorkDetails.Text, total, paid, remaining);
                     LoadData();
                     Classes.clsMain.DisableReset(pnlDetails);
                 }
@@ -118,12 +170,12 @@ namespace MediaWarPOS.Windows
         {
             if (txtSearch.Text=="")
             {
-                Classes.clsSelect.selectCustomers(dataGridView1,gvCustomerID,gvName,gvPhone1,gvPhone2,gvDate,gvWorkDetails);
+                Classes.clsSelect.selectCustomers(dataGridView1,gvCustomerID,gvName,gvPhone1,gvPhone2,gvDate,gvWorkDetails,gvTotal,gvPaid,gvRemeining);
                 Classes.clsMain.SNO(dataGridView1, "gvSNO");
             }
             else
             {
-                Classes.clsSelect.selectCustomers(dataGridView1, gvCustomerID, gvName, gvPhone1, gvPhone2, gvDate, gvWorkDetails,txtSearch.Text);
+                Classes.clsSelect.selectCustomers(dataGridView1, gvCustomerID, gvName, gvPhone1, gvPhone2, gvDate, gvWorkDetails,gvTotal, gvPaid, gvRemeining, txtSearch.Text);
                 Classes.clsMain.SNO(dataGridView1, "gvSNO");
             }
         }
@@ -141,9 +193,12 @@ namespace MediaWarPOS.Windows
                 txtPhone2.Text = row.Cells["gvPhone2"].Value.ToString();
                 txtWorkDetails.Text = row.Cells["gvWorkDetails"].Value.ToString();
                 dtDate.Value = Convert.ToDateTime(row.Cells["gvDate"].Value.ToString());
+                txtTotal.Text = row.Cells["gvTotal"].Value.ToString();
+                txtPaid.Text = row.Cells["gvPaid"].Value.ToString();
+                txtRemaining.Text = row.Cells["gvRemeining"].Value.ToString();
             }
         }
-
+        
         public override void txtSearch_TextChanged(object sender, EventArgs e)
         {
             LoadData();

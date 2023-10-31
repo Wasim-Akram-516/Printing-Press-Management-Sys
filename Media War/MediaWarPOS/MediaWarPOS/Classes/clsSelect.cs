@@ -473,8 +473,12 @@ namespace MediaWarPOS.Classes
             }
         }
 
-        public static void selectCustomers(DataGridView GV, DataGridViewColumn GVCUSTOMERID, DataGridViewColumn GVNAME, DataGridViewColumn GVPHONE1,
-            DataGridViewColumn GVPHONE2, DataGridViewColumn GVDATE, DataGridViewColumn GVWORKDETAILS, string data = null)
+        public static void selectCustomers(DataGridView GV,
+     DataGridViewColumn GVCUSTOMERID, DataGridViewColumn GVNAME,
+     DataGridViewColumn GVPHONE1, DataGridViewColumn GVPHONE2,
+     DataGridViewColumn GVDATE, DataGridViewColumn GVWORKDETAILS,
+     DataGridViewColumn GVTOTALPRICE, DataGridViewColumn GVPAID,
+     DataGridViewColumn GVREMAINING, string data = null)
         {
             try
             {
@@ -499,6 +503,9 @@ namespace MediaWarPOS.Classes
                 GVPHONE2.DataPropertyName = dt.Columns["phone2"].ToString();
                 GVDATE.DataPropertyName = dt.Columns["date"].ToString();
                 GVWORKDETAILS.DataPropertyName = dt.Columns["workDetails"].ToString();
+                GVTOTALPRICE.DataPropertyName = dt.Columns["totalPrice"].ToString();
+                GVPAID.DataPropertyName = dt.Columns["paid"].ToString();
+                GVREMAINING.DataPropertyName = dt.Columns["remaining"].ToString();
                 GV.DataSource = dt;
             }
             catch (Exception x)
@@ -507,6 +514,7 @@ namespace MediaWarPOS.Classes
                 clsMain.ShowMsg(x.Message, "Error", "Error");
             }
         }
+
 
     }
 }

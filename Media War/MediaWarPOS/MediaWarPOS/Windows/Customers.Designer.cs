@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtWorkDetails = new System.Windows.Forms.TextBox();
@@ -46,6 +49,15 @@
             this.errPhone1 = new System.Windows.Forms.Label();
             this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPaid = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtRemaining = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.errTotal = new System.Windows.Forms.Label();
+            this.errPaid = new System.Windows.Forms.Label();
+            this.errRemaining = new System.Windows.Forms.Label();
             this.gvSNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvCustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +65,9 @@
             this.gvPhone2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvWorkDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvRemeining = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDetails.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,6 +80,15 @@
             // 
             // pnlDetails
             // 
+            this.pnlDetails.Controls.Add(this.errRemaining);
+            this.pnlDetails.Controls.Add(this.errPaid);
+            this.pnlDetails.Controls.Add(this.errTotal);
+            this.pnlDetails.Controls.Add(this.txtRemaining);
+            this.pnlDetails.Controls.Add(this.label8);
+            this.pnlDetails.Controls.Add(this.txtPaid);
+            this.pnlDetails.Controls.Add(this.label5);
+            this.pnlDetails.Controls.Add(this.txtTotal);
+            this.pnlDetails.Controls.Add(this.label4);
             this.pnlDetails.Controls.Add(this.dtDate);
             this.pnlDetails.Controls.Add(this.txtWorkDetails);
             this.pnlDetails.Controls.Add(this.label18);
@@ -92,6 +116,15 @@
             this.pnlDetails.Controls.SetChildIndex(this.label18, 0);
             this.pnlDetails.Controls.SetChildIndex(this.txtWorkDetails, 0);
             this.pnlDetails.Controls.SetChildIndex(this.dtDate, 0);
+            this.pnlDetails.Controls.SetChildIndex(this.label4, 0);
+            this.pnlDetails.Controls.SetChildIndex(this.txtTotal, 0);
+            this.pnlDetails.Controls.SetChildIndex(this.label5, 0);
+            this.pnlDetails.Controls.SetChildIndex(this.txtPaid, 0);
+            this.pnlDetails.Controls.SetChildIndex(this.label8, 0);
+            this.pnlDetails.Controls.SetChildIndex(this.txtRemaining, 0);
+            this.pnlDetails.Controls.SetChildIndex(this.errTotal, 0);
+            this.pnlDetails.Controls.SetChildIndex(this.errPaid, 0);
+            this.pnlDetails.Controls.SetChildIndex(this.errRemaining, 0);
             // 
             // pnlMain
             // 
@@ -134,16 +167,19 @@
             this.gvPhone1,
             this.gvPhone2,
             this.gvDate,
-            this.gvWorkDetails});
+            this.gvWorkDetails,
+            this.gvTotal,
+            this.gvPaid,
+            this.gvRemeining});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 22);
             this.dataGridView1.Name = "dataGridView1";
@@ -161,7 +197,7 @@
             this.txtWorkDetails.MaxLength = 25;
             this.txtWorkDetails.Multiline = true;
             this.txtWorkDetails.Name = "txtWorkDetails";
-            this.txtWorkDetails.Size = new System.Drawing.Size(250, 117);
+            this.txtWorkDetails.Size = new System.Drawing.Size(250, 93);
             this.txtWorkDetails.TabIndex = 169;
             this.txtWorkDetails.TextChanged += new System.EventHandler(this.txtWorkDetails_TextChanged);
             // 
@@ -285,6 +321,99 @@
             this.label2.TabIndex = 173;
             this.label2.Text = "Date";
             // 
+            // txtTotal
+            // 
+            this.txtTotal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(11, 405);
+            this.txtTotal.MaxLength = 11;
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(251, 26);
+            this.txtTotal.TabIndex = 187;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 384);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 18);
+            this.label4.TabIndex = 188;
+            this.label4.Text = "Total Price";
+            // 
+            // txtPaid
+            // 
+            this.txtPaid.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaid.Location = new System.Drawing.Point(11, 453);
+            this.txtPaid.MaxLength = 11;
+            this.txtPaid.Name = "txtPaid";
+            this.txtPaid.Size = new System.Drawing.Size(251, 26);
+            this.txtPaid.TabIndex = 189;
+            this.txtPaid.TextChanged += new System.EventHandler(this.txtPaid_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 432);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 18);
+            this.label5.TabIndex = 190;
+            this.label5.Text = "Paid Amount";
+            // 
+            // txtRemaining
+            // 
+            this.txtRemaining.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemaining.Location = new System.Drawing.Point(11, 502);
+            this.txtRemaining.MaxLength = 11;
+            this.txtRemaining.Name = "txtRemaining";
+            this.txtRemaining.Size = new System.Drawing.Size(251, 26);
+            this.txtRemaining.TabIndex = 191;
+            this.txtRemaining.TextChanged += new System.EventHandler(this.txtRemaining_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 481);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 18);
+            this.label8.TabIndex = 192;
+            this.label8.Text = "Remaining";
+            // 
+            // errTotal
+            // 
+            this.errTotal.AutoSize = true;
+            this.errTotal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errTotal.Location = new System.Drawing.Point(243, 385);
+            this.errTotal.Name = "errTotal";
+            this.errTotal.Size = new System.Drawing.Size(16, 18);
+            this.errTotal.TabIndex = 193;
+            this.errTotal.Text = "*";
+            this.errTotal.Visible = false;
+            // 
+            // errPaid
+            // 
+            this.errPaid.AutoSize = true;
+            this.errPaid.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errPaid.Location = new System.Drawing.Point(243, 432);
+            this.errPaid.Name = "errPaid";
+            this.errPaid.Size = new System.Drawing.Size(16, 18);
+            this.errPaid.TabIndex = 194;
+            this.errPaid.Text = "*";
+            this.errPaid.Visible = false;
+            // 
+            // errRemaining
+            // 
+            this.errRemaining.AutoSize = true;
+            this.errRemaining.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errRemaining.Location = new System.Drawing.Point(243, 482);
+            this.errRemaining.Name = "errRemaining";
+            this.errRemaining.Size = new System.Drawing.Size(16, 18);
+            this.errRemaining.TabIndex = 195;
+            this.errRemaining.Text = "*";
+            this.errRemaining.Visible = false;
+            // 
             // gvSNO
             // 
             this.gvSNO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -333,6 +462,33 @@
             this.gvWorkDetails.Name = "gvWorkDetails";
             this.gvWorkDetails.ReadOnly = true;
             // 
+            // gvTotal
+            // 
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.gvTotal.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gvTotal.HeaderText = "Total Price";
+            this.gvTotal.Name = "gvTotal";
+            this.gvTotal.ReadOnly = true;
+            // 
+            // gvPaid
+            // 
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.gvPaid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.gvPaid.HeaderText = "Paid Amount";
+            this.gvPaid.Name = "gvPaid";
+            this.gvPaid.ReadOnly = true;
+            // 
+            // gvRemeining
+            // 
+            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.gvRemeining.DefaultCellStyle = dataGridViewCellStyle5;
+            this.gvRemeining.HeaderText = "Remaining";
+            this.gvRemeining.Name = "gvRemeining";
+            this.gvRemeining.ReadOnly = true;
+            // 
             // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -367,6 +523,15 @@
         private System.Windows.Forms.Label errPhone1;
         private System.Windows.Forms.DateTimePicker dtDate;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtRemaining;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPaid;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label errRemaining;
+        private System.Windows.Forms.Label errPaid;
+        private System.Windows.Forms.Label errTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvSNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvCustomerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvName;
@@ -374,5 +539,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gvPhone2;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvWorkDetails;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvPaid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvRemeining;
     }
 }
