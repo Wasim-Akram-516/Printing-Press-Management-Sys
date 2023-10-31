@@ -196,5 +196,80 @@ namespace MediaWarPOS.Classes
             }
             return st;
         }
+
+        public static void InsertSalaries(int fkEmployeeID, int month, int year, DateTime date, float paidAmount, byte paymentType, string remarks)
+        {
+            try
+            {
+                SqlCommand com = new SqlCommand("stpAddSalaries", clsMain.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@fkEmployeeID", fkEmployeeID);
+                com.Parameters.AddWithValue("@month", month);
+                com.Parameters.AddWithValue("@year", year);
+                com.Parameters.AddWithValue("@date", date);
+                com.Parameters.AddWithValue("@paidAmount", paidAmount);
+                com.Parameters.AddWithValue("@paymentType", paymentType);
+                com.Parameters.AddWithValue("@remarks", remarks);
+
+                clsMain.con.Open();
+                com.ExecuteNonQuery();
+                clsMain.con.Close();
+                
+                clsMain.ShowMsg("Salary details added successfully!", "Success!", "Success");
+            }
+            catch (Exception x)
+            {
+                clsMain.ShowMsg(x.Message, "Error", "Error");
+            }
+        }
+
+        public static int AddExpenses(DateTime date, string ExpenseType, string Description, float Amount, string receiptName, string receiptNo)
+        {
+            int st = 0;
+            try
+            {
+                SqlCommand com = new SqlCommand("stpAddExpenses", clsMain.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@Date", date);
+                com.Parameters.AddWithValue("@ExpenseType", ExpenseType);
+                com.Parameters.AddWithValue("@Description", Description);
+                com.Parameters.AddWithValue("@Amount", Amount);
+                com.Parameters.AddWithValue("@ReceiptName", receiptName);
+                com.Parameters.AddWithValue("@ReceiptNo", receiptNo);
+                clsMain.con.Open();
+                st = com.ExecuteNonQuery();
+                clsMain.con.Close();
+            }
+            catch (Exception x)
+            {
+                clsMain.con.Close();
+                clsMain.ShowMsg(x.Message, "Error", "Error");
+            }
+            return st;
+        }
+        public static void InsertCustomers(string name, string phone1, string phone2, DateTime date, string workDetails)
+        {
+            try
+            {
+                SqlCommand com = new SqlCommand("stpAddCustomers", clsMain.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@name", name);
+                com.Parameters.AddWithValue("@phone1", phone1);
+                if (phone2 != null)
+                    com.Parameters.AddWithValue("@phone2", phone2);
+                com.Parameters.AddWithValue("@date", date);
+                com.Parameters.AddWithValue("@workDetails", workDetails);
+                clsMain.con.Open();
+                com.ExecuteNonQuery();
+                clsMain.con.Close();
+                clsMain.ShowMsg(name + " added successfully!", "Success!", "Success");
+            }
+            catch (Exception x)
+            {
+                clsMain.con.Close();
+                clsMain.ShowMsg(x.Message, "Error", "Error");
+            }
+        }
+
     }
 }

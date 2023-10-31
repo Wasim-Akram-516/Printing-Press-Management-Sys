@@ -1,6 +1,7 @@
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\bin\Debug\MediaWarPOS.exe.config
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\bin\Debug\MediaWarPOS.exe
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\bin\Debug\MediaWarPOS.pdb
+D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.csprojResolveAssemblyReference.cache
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Dashboards.dbAdmin.resources
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Dashboards.Login.resources
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Properties.Resources.resources
@@ -10,6 +11,8 @@ D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Sett
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Settings.WindowSample.resources
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.Categories.resources
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.Employees.resources
+D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.Expenses.resources
+D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.ExpensesView.resources
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.Investments.resources
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.ProductCategories.resources
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.Products.resources
@@ -21,3 +24,4 @@ D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Wind
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.csproj.GenerateResource.Cache
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.exe
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.pdb
+D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.Customers.resources

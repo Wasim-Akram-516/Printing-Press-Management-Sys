@@ -19,11 +19,14 @@ namespace MediaWarPOS.Dashboards
         }
         private void dbAdmin_Load(object sender, EventArgs e)
         {
+            LoadData();
+        }
+        private void LoadData()
+        {
             Classes.clsSelect.selectStock(dataGridView1, gvStockCatID, gvStockCatName, gvProductCatID, gvProdCatName, gvBrandID, gvBrandName, gvProductID,
                 gvSize, gvGram, gvCostPrice, gvRetailPrice, gvPerItemPrice, gvItemsNo, gvQTY, gvDate, gvStockID, gvStockQTY);
             Classes.clsMain.SNO(dataGridView1, "gvSNO");
         }
-
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (dataGridView1.Columns[e.ColumnIndex].Name == "gvStockQTY")
@@ -93,6 +96,18 @@ namespace MediaWarPOS.Dashboards
         private void btnSalaries_Click(object sender, EventArgs e)
         {
             Windows.Salaries obj = new Windows.Salaries();
+            Classes.clsMain.ShowWindow(obj, this, MDI.ActiveForm);
+        }
+
+        private void btnExpenses_Click(object sender, EventArgs e)
+        {
+            Windows.Expenses obj = new Windows.Expenses();
+            Classes.clsMain.ShowWindow(obj, this, MDI.ActiveForm);
+        }
+
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            Windows.Customers obj = new Windows.Customers();
             Classes.clsMain.ShowWindow(obj, this, MDI.ActiveForm);
         }
     }

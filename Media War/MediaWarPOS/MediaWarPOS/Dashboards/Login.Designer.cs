@@ -128,6 +128,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(265, 26);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.Text = "admin";
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // btnLogin
@@ -147,6 +148,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(265, 26);
             this.txtPassword.TabIndex = 1;
+            this.txtPassword.Text = "@mediawar2023";
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 

@@ -96,11 +96,29 @@
     <Compile Include="Dashboards\Categories.Designer.cs">
       <DependentUpon>Categories.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Employees.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Windows\Employees.Designer.cs">
       <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Expenses.Designer.cs">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ExpensesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ExpensesView.Designer.cs">
+      <DependentUpon>ExpensesView.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Investments.cs">
       <SubType>Form</SubType>
@@ -181,8 +199,17 @@
     <EmbeddedResource Include="Dashboards\Categories.resx">
       <DependentUpon>Categories.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Expenses.resx">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ExpensesView.resx">
+      <DependentUpon>ExpensesView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Investments.resx">
       <DependentUpon>Investments.cs</DependentUpon>
@@ -274,6 +301,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-cash-in-hand-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-budget-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-management-961.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

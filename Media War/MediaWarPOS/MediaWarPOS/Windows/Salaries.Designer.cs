@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtMonth = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -61,9 +61,9 @@
             this.gvYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvPaidAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTotalPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvPaymentType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvTotalPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDetails.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -135,6 +135,7 @@
             this.dtMonth.ShowUpDown = true;
             this.dtMonth.Size = new System.Drawing.Size(259, 26);
             this.dtMonth.TabIndex = 2;
+            this.dtMonth.ValueChanged += new System.EventHandler(this.dtMonth_ValueChanged);
             // 
             // label2
             // 
@@ -164,14 +165,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gvSNO,
@@ -183,18 +184,18 @@
             this.gvYear,
             this.gvPaidAmount,
             this.gvDate,
-            this.gvTotalPaid,
             this.gvPaymentType,
-            this.gvRemarks});
+            this.gvRemarks,
+            this.gvTotalPaid});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 22);
             this.dataGridView1.Name = "dataGridView1";
@@ -203,6 +204,8 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1011, 629);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // label3
             // 
@@ -402,6 +405,7 @@
             this.gvYear.HeaderText = "Year";
             this.gvYear.Name = "gvYear";
             this.gvYear.ReadOnly = true;
+            this.gvYear.Visible = false;
             // 
             // gvPaidAmount
             // 
@@ -411,18 +415,12 @@
             // 
             // gvDate
             // 
-            dataGridViewCellStyle5.Format = "M";
-            dataGridViewCellStyle5.NullValue = null;
-            this.gvDate.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Format = "M";
+            dataGridViewCellStyle2.NullValue = null;
+            this.gvDate.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvDate.HeaderText = "Payment Date";
             this.gvDate.Name = "gvDate";
             this.gvDate.ReadOnly = true;
-            // 
-            // gvTotalPaid
-            // 
-            this.gvTotalPaid.HeaderText = "Total Paid";
-            this.gvTotalPaid.Name = "gvTotalPaid";
-            this.gvTotalPaid.ReadOnly = true;
             // 
             // gvPaymentType
             // 
@@ -435,6 +433,12 @@
             this.gvRemarks.HeaderText = "Remarks";
             this.gvRemarks.Name = "gvRemarks";
             this.gvRemarks.ReadOnly = true;
+            // 
+            // gvTotalPaid
+            // 
+            this.gvTotalPaid.HeaderText = "Total Paid";
+            this.gvTotalPaid.Name = "gvTotalPaid";
+            this.gvTotalPaid.ReadOnly = true;
             // 
             // Salaries
             // 
@@ -485,8 +489,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gvYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvPaidAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvTotalPaid;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvPaymentType;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvRemarks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvTotalPaid;
     }
 }

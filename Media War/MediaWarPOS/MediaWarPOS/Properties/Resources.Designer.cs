@@ -83,6 +83,16 @@ namespace MediaWarPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_budget_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-budget-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cash_in_hand_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-cash-in-hand-96", resourceCulture);
@@ -136,6 +146,16 @@ namespace MediaWarPOS.Properties {
         internal static System.Drawing.Bitmap icons8_management_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-management-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_management_961 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-management-961", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

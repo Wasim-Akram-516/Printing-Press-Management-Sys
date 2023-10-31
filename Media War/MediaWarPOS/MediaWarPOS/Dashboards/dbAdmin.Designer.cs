@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.LinkBtnLogOut = new System.Windows.Forms.LinkLabel();
@@ -56,6 +56,7 @@
             this.gvStockID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvStockQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDashboardButtons = new System.Windows.Forms.Panel();
+            this.btnCustomers = new System.Windows.Forms.Button();
             this.btnInvestment = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
             this.btnSuppliers = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@
             this.btnCategories = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
             this.btnSalaries = new System.Windows.Forms.Button();
+            this.btnExpenses = new System.Windows.Forms.Button();
             this.pnlUser.SuspendLayout();
             this.pnlDetails.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -100,6 +102,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.btnCustomers, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnInvestment, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnEmployees, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnSuppliers, 2, 0);
@@ -108,6 +111,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnCategories, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnSales, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnSalaries, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnExpenses, 2, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -174,14 +178,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gvSNO,
@@ -203,14 +207,14 @@
             this.gvStockID,
             this.gvStockQTY});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 22);
             this.dataGridView1.Name = "dataGridView1";
@@ -336,8 +340,8 @@
             // gvDate
             // 
             this.gvDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle5.Format = "D";
-            this.gvDate.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Format = "D";
+            this.gvDate.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvDate.HeaderText = "Date";
             this.gvDate.Name = "gvDate";
             this.gvDate.ReadOnly = true;
@@ -365,6 +369,21 @@
             this.pnlDashboardButtons.Name = "pnlDashboardButtons";
             this.pnlDashboardButtons.Size = new System.Drawing.Size(491, 645);
             this.pnlDashboardButtons.TabIndex = 2;
+            // 
+            // btnCustomers
+            // 
+            this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomers.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomers.Image = global::MediaWarPOS.Properties.Resources.icons8_management_961;
+            this.btnCustomers.Location = new System.Drawing.Point(3, 486);
+            this.btnCustomers.Name = "btnCustomers";
+            this.btnCustomers.Size = new System.Drawing.Size(157, 156);
+            this.btnCustomers.TabIndex = 14;
+            this.btnCustomers.Text = "CUSTOMERS";
+            this.btnCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCustomers.UseVisualStyleBackColor = true;
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
             // btnInvestment
             // 
@@ -476,7 +495,7 @@
             this.btnSalaries.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalaries.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalaries.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalaries.Image = global::MediaWarPOS.Properties.Resources.icons8_cash_in_hand_96;
+            this.btnSalaries.Image = global::MediaWarPOS.Properties.Resources.icons8_budget_96;
             this.btnSalaries.Location = new System.Drawing.Point(166, 325);
             this.btnSalaries.Name = "btnSalaries";
             this.btnSalaries.Size = new System.Drawing.Size(157, 155);
@@ -485,6 +504,21 @@
             this.btnSalaries.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSalaries.UseVisualStyleBackColor = true;
             this.btnSalaries.Click += new System.EventHandler(this.btnSalaries_Click);
+            // 
+            // btnExpenses
+            // 
+            this.btnExpenses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpenses.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExpenses.Image = global::MediaWarPOS.Properties.Resources.icons8_cash_in_hand_96;
+            this.btnExpenses.Location = new System.Drawing.Point(329, 325);
+            this.btnExpenses.Name = "btnExpenses";
+            this.btnExpenses.Size = new System.Drawing.Size(159, 155);
+            this.btnExpenses.TabIndex = 13;
+            this.btnExpenses.Text = "EXPENSES";
+            this.btnExpenses.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnExpenses.UseVisualStyleBackColor = true;
+            this.btnExpenses.Click += new System.EventHandler(this.btnExpenses_Click);
             // 
             // dbAdmin
             // 
@@ -524,6 +558,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSales;
+        private System.Windows.Forms.Button btnSalaries;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvSNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvStockCatID;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvStockCatName;
@@ -542,6 +577,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gvDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvStockID;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvStockQTY;
-        private System.Windows.Forms.Button btnSalaries;
+        private System.Windows.Forms.Button btnExpenses;
+        private System.Windows.Forms.Button btnCustomers;
     }
 }
