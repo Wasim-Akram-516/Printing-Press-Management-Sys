@@ -126,7 +126,7 @@
             this.txtReceiptName.Location = new System.Drawing.Point(3, 304);
             this.txtReceiptName.Name = "txtReceiptName";
             this.txtReceiptName.Size = new System.Drawing.Size(263, 26);
-            this.txtReceiptName.TabIndex = 87;
+            this.txtReceiptName.TabIndex = 4;
             this.txtReceiptName.TextChanged += new System.EventHandler(this.txtReceiptName_TextChanged);
             // 
             // label5
@@ -143,7 +143,7 @@
             this.txtReceiptNo.Location = new System.Drawing.Point(3, 355);
             this.txtReceiptNo.Name = "txtReceiptNo";
             this.txtReceiptNo.Size = new System.Drawing.Size(263, 26);
-            this.txtReceiptNo.TabIndex = 88;
+            this.txtReceiptNo.TabIndex = 5;
             this.txtReceiptNo.TextChanged += new System.EventHandler(this.txtReceiptNo_TextChanged);
             // 
             // btnAddToList
@@ -154,7 +154,7 @@
             this.btnAddToList.Location = new System.Drawing.Point(4, 386);
             this.btnAddToList.Name = "btnAddToList";
             this.btnAddToList.Size = new System.Drawing.Size(263, 40);
-            this.btnAddToList.TabIndex = 89;
+            this.btnAddToList.TabIndex = 6;
             this.btnAddToList.Text = " ADD TO LIST";
             this.btnAddToList.UseVisualStyleBackColor = false;
             this.btnAddToList.Click += new System.EventHandler(this.btnAddToList_Click);
@@ -166,7 +166,7 @@
             this.dtDate.Location = new System.Drawing.Point(3, 88);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(263, 26);
-            this.dtDate.TabIndex = 83;
+            this.dtDate.TabIndex = 0;
             this.dtDate.ValueChanged += new System.EventHandler(this.dtDate_ValueChanged);
             // 
             // label9
@@ -203,7 +203,7 @@
             this.txtAmount.Location = new System.Drawing.Point(4, 254);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(263, 26);
-            this.txtAmount.TabIndex = 86;
+            this.txtAmount.TabIndex = 3;
             this.txtAmount.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             // 
             // errAmount
@@ -232,7 +232,7 @@
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(263, 45);
-            this.txtDescription.TabIndex = 85;
+            this.txtDescription.TabIndex = 2;
             this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
             // 
             // errDescription
@@ -265,7 +265,7 @@
             this.ddExpenseType.Location = new System.Drawing.Point(4, 135);
             this.ddExpenseType.Name = "ddExpenseType";
             this.ddExpenseType.Size = new System.Drawing.Size(263, 26);
-            this.ddExpenseType.TabIndex = 84;
+            this.ddExpenseType.TabIndex = 1;
             this.ddExpenseType.SelectedIndexChanged += new System.EventHandler(this.ddExpenseType_SelectedIndexChanged);
             // 
             // label6

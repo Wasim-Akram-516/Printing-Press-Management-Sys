@@ -53,6 +53,12 @@
     <Compile Include="Classes\clsSelect.cs" />
     <Compile Include="Classes\clsUpdate.cs" />
     <Compile Include="Classes\Program.cs" />
+    <Compile Include="Dashboards\dbCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\dbCustomers.Designer.cs">
+      <DependentUpon>dbCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboards\dbAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,17 +96,17 @@
     <Compile Include="Settings\WindowSample.Designer.cs">
       <DependentUpon>WindowSample.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboards\Categories.cs">
+    <Compile Include="Dashboards\dbCategories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboards\Categories.Designer.cs">
-      <DependentUpon>Categories.cs</DependentUpon>
+    <Compile Include="Dashboards\dbCategories.Designer.cs">
+      <DependentUpon>dbCategories.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Customers.cs">
+    <Compile Include="Windows\CustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\Customers.Designer.cs">
-      <DependentUpon>Customers.cs</DependentUpon>
+    <Compile Include="Windows\CustomerDetails.Designer.cs">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Employees.cs">
       <SubType>Form</SubType>
@@ -168,6 +174,15 @@
     <Compile Include="Windows\Brands.Designer.cs">
       <DependentUpon>Brands.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\WorkDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\WorkDetails.Designer.cs">
+      <DependentUpon>WorkDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboards\dbCustomers.resx">
+      <DependentUpon>dbCustomers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboards\dbAdmin.resx">
       <DependentUpon>dbAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,11 +211,11 @@
     <EmbeddedResource Include="Settings\WindowSample.resx">
       <DependentUpon>WindowSample.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboards\Categories.resx">
-      <DependentUpon>Categories.cs</DependentUpon>
+    <EmbeddedResource Include="Dashboards\dbCategories.resx">
+      <DependentUpon>dbCategories.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Customers.resx">
-      <DependentUpon>Customers.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\CustomerDetails.resx">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
@@ -234,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Brands.resx">
       <DependentUpon>Brands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\WorkDetails.resx">
+      <DependentUpon>WorkDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -307,6 +325,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-management-961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-property-96.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

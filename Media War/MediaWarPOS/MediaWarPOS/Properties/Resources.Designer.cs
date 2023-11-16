@@ -123,6 +123,16 @@ namespace MediaWarPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_edit_property_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-edit-property-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_folded_booklet_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-folded-booklet-96", resourceCulture);

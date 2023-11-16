@@ -33,13 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtStart = new System.Windows.Forms.DateTimePicker();
-            this.dtEnd = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblTotalSales = new System.Windows.Forms.Label();
             this.gvSNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvStockCatID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvStockCatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +49,13 @@
             this.gvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvPurpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtStart = new System.Windows.Forms.DateTimePicker();
+            this.dtEnd = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotalSales = new System.Windows.Forms.Label();
             this.pnlDetails.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -152,72 +152,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(827, 563);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 18);
-            this.label4.TabIndex = 78;
-            this.label4.Text = "From";
-            // 
-            // dtStart
-            // 
-            this.dtStart.Location = new System.Drawing.Point(8, 88);
-            this.dtStart.Name = "dtStart";
-            this.dtStart.Size = new System.Drawing.Size(259, 26);
-            this.dtStart.TabIndex = 79;
-            this.dtStart.ValueChanged += new System.EventHandler(this.dtStart_ValueChanged);
-            // 
-            // dtEnd
-            // 
-            this.dtEnd.Location = new System.Drawing.Point(8, 138);
-            this.dtEnd.Name = "dtEnd";
-            this.dtEnd.Size = new System.Drawing.Size(259, 26);
-            this.dtEnd.TabIndex = 81;
-            this.dtEnd.ValueChanged += new System.EventHandler(this.dtEnd_ValueChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 18);
-            this.label2.TabIndex = 80;
-            this.label2.Text = "To";
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnLoad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoad.Location = new System.Drawing.Point(8, 170);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(259, 40);
-            this.btnLoad.TabIndex = 82;
-            this.btnLoad.Text = "LOAD";
-            this.btnLoad.UseVisualStyleBackColor = false;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 213);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 25);
-            this.label3.TabIndex = 83;
-            this.label3.Text = "Total: Rs.";
-            // 
-            // lblTotalSales
-            // 
-            this.lblTotalSales.AutoSize = true;
-            this.lblTotalSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalSales.Location = new System.Drawing.Point(117, 213);
-            this.lblTotalSales.Name = "lblTotalSales";
-            this.lblTotalSales.Size = new System.Drawing.Size(0, 25);
-            this.lblTotalSales.TabIndex = 84;
             // 
             // gvSNO
             // 
@@ -326,6 +260,72 @@
             this.gvDate.HeaderText = "Date";
             this.gvDate.Name = "gvDate";
             this.gvDate.ReadOnly = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 66);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 18);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "From";
+            // 
+            // dtStart
+            // 
+            this.dtStart.Location = new System.Drawing.Point(8, 88);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.Size = new System.Drawing.Size(259, 26);
+            this.dtStart.TabIndex = 0;
+            this.dtStart.ValueChanged += new System.EventHandler(this.dtStart_ValueChanged);
+            // 
+            // dtEnd
+            // 
+            this.dtEnd.Location = new System.Drawing.Point(8, 138);
+            this.dtEnd.Name = "dtEnd";
+            this.dtEnd.Size = new System.Drawing.Size(259, 26);
+            this.dtEnd.TabIndex = 1;
+            this.dtEnd.ValueChanged += new System.EventHandler(this.dtEnd_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 18);
+            this.label2.TabIndex = 80;
+            this.label2.Text = "To";
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnLoad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoad.Location = new System.Drawing.Point(8, 170);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(259, 40);
+            this.btnLoad.TabIndex = 2;
+            this.btnLoad.Text = "LOAD";
+            this.btnLoad.UseVisualStyleBackColor = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 213);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 25);
+            this.label3.TabIndex = 83;
+            this.label3.Text = "Total: Rs.";
+            // 
+            // lblTotalSales
+            // 
+            this.lblTotalSales.AutoSize = true;
+            this.lblTotalSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSales.Location = new System.Drawing.Point(117, 213);
+            this.lblTotalSales.Name = "lblTotalSales";
+            this.lblTotalSales.Size = new System.Drawing.Size(0, 25);
+            this.lblTotalSales.TabIndex = 84;
             // 
             // Sales
             // 

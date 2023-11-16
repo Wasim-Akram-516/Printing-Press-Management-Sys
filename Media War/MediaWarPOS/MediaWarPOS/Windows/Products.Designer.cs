@@ -65,8 +65,6 @@
             this.btnAddToList = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.gvStockCatID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvStockCatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvProductCatID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,6 +80,8 @@
             this.gvPerItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvRemove = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlDetails.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -544,23 +544,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(65, 555);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 18);
-            this.lblTotal.TabIndex = 62;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 555);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 18);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "Total:";
-            // 
             // gvStockCatID
             // 
             this.gvStockCatID.HeaderText = "Stock Cat ID";
@@ -655,6 +638,23 @@
             this.gvRemove.ReadOnly = true;
             this.gvRemove.Text = "Remove";
             this.gvRemove.UseColumnTextForButtonValue = true;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(65, 555);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 18);
+            this.lblTotal.TabIndex = 62;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 555);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 18);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Total:";
             // 
             // Products
             // 

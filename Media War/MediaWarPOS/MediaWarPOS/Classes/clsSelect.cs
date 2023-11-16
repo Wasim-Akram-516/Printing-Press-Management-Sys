@@ -473,23 +473,20 @@ namespace MediaWarPOS.Classes
             }
         }
 
-        public static void selectCustomers(DataGridView GV,
-     DataGridViewColumn GVCUSTOMERID, DataGridViewColumn GVNAME,
-     DataGridViewColumn GVPHONE1, DataGridViewColumn GVPHONE2,
-     DataGridViewColumn GVDATE, DataGridViewColumn GVWORKDETAILS,
-     DataGridViewColumn GVTOTALPRICE, DataGridViewColumn GVPAID,
-     DataGridViewColumn GVREMAINING, string data = null)
+        public static void selectCustomerDetails(DataGridView GV,
+    DataGridViewColumn GVCUSTOMERID, DataGridViewColumn GVNAME,
+    DataGridViewColumn GVPHONE1, DataGridViewColumn GVPHONE2, string data = null)
         {
             try
             {
                 SqlCommand com;
-                if (data == null)
+                if (string.IsNullOrEmpty(data))
                 {
-                    com = new SqlCommand("stpSelectCustomers", clsMain.con);
+                    com = new SqlCommand("stpSelectCustomerDetails", clsMain.con); 
                 }
                 else
                 {
-                    com = new SqlCommand("stpSearchCustomers", clsMain.con);
+                    com = new SqlCommand("stpSearchCustomerDetails", clsMain.con);
                     com.Parameters.AddWithValue("@data", data);
                 }
 
@@ -501,11 +498,6 @@ namespace MediaWarPOS.Classes
                 GVNAME.DataPropertyName = dt.Columns["name"].ToString();
                 GVPHONE1.DataPropertyName = dt.Columns["phone1"].ToString();
                 GVPHONE2.DataPropertyName = dt.Columns["phone2"].ToString();
-                GVDATE.DataPropertyName = dt.Columns["date"].ToString();
-                GVWORKDETAILS.DataPropertyName = dt.Columns["workDetails"].ToString();
-                GVTOTALPRICE.DataPropertyName = dt.Columns["totalPrice"].ToString();
-                GVPAID.DataPropertyName = dt.Columns["paid"].ToString();
-                GVREMAINING.DataPropertyName = dt.Columns["remaining"].ToString();
                 GV.DataSource = dt;
             }
             catch (Exception x)
@@ -515,6 +507,45 @@ namespace MediaWarPOS.Classes
             }
         }
 
+        public static void selectWorkDetails(DataGridView GV,
+    DataGridViewColumn GVWORKDETAILID, DataGridViewColumn GVCUSTOMERID, DataGridViewColumn GVNAME, DataGridViewColumn GVDATE,
+    DataGridViewColumn GVWORKDETAILS, DataGridViewColumn GVTOTALPRICE, DataGridViewColumn GVPAID,
+    DataGridViewColumn GVREMAINING, DataGridViewColumn GVISDELIVERED, string data = null)
+        {
+            try
+            {
+                SqlCommand com;
+                if (string.IsNullOrEmpty(data))
+                {
+                    com = new SqlCommand("stpSelectWorkDetails", clsMain.con); 
+                }
+                else
+                {
+                    com = new SqlCommand("stpSearchWorkDetails", clsMain.con); 
+                    com.Parameters.AddWithValue("@data", data);
+                }
+
+                com.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(com);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                GVWORKDETAILID.DataPropertyName = dt.Columns["workDetailID"].ToString();
+                GVCUSTOMERID.DataPropertyName = dt.Columns["customerID"].ToString();
+                GVNAME.DataPropertyName = dt.Columns["name"].ToString();
+                GVDATE.DataPropertyName = dt.Columns["date"].ToString();
+                GVWORKDETAILS.DataPropertyName = dt.Columns["workDetails"].ToString();
+                GVTOTALPRICE.DataPropertyName = dt.Columns["totalPrice"].ToString();
+                GVPAID.DataPropertyName = dt.Columns["paid"].ToString();
+                GVREMAINING.DataPropertyName = dt.Columns["remaining"].ToString();
+                GVISDELIVERED.DataPropertyName = dt.Columns["isDelivered"].ToString();
+                GV.DataSource = dt;
+            }
+            catch (Exception x)
+            {
+                clsMain.con.Close();
+                clsMain.ShowMsg(x.Message, "Error", "Error");
+            }
+        }
 
     }
 }

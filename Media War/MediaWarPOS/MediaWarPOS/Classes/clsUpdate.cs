@@ -226,27 +226,51 @@ namespace MediaWarPOS.Classes
             }
             return st;
         }
-        public static void UpdateCustomers(int customerID, string name, string phone1, string phone2, DateTime date, string workDetails, decimal totalPrice, decimal paid, decimal remaining)
+        public static void UpdateCustomerDetails(int customerID, string name, string phone1, string phone2)
         {
             try
             {
-                SqlCommand com = new SqlCommand("stpUpdateCustomers", clsMain.con);
+                SqlCommand com = new SqlCommand("stpUpdateCustomerDetails", clsMain.con);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("@customerID", customerID);
                 com.Parameters.AddWithValue("@name", name);
                 com.Parameters.AddWithValue("@phone1", phone1);
-                if (phone2 != null)
+                if (!string.IsNullOrEmpty(phone2))
                     com.Parameters.AddWithValue("@phone2", phone2);
-                com.Parameters.AddWithValue("@date", date);
-                com.Parameters.AddWithValue("@workDetails", workDetails);
-                com.Parameters.AddWithValue("@totalPrice", totalPrice);
-                com.Parameters.AddWithValue("@paid", paid);
-                com.Parameters.AddWithValue("@remaining", remaining);
+                else
+                    com.Parameters.AddWithValue("@phone2", DBNull.Value);
 
                 clsMain.con.Open();
                 com.ExecuteNonQuery();
                 clsMain.con.Close();
                 clsMain.ShowMsg(name + " updated successfully!", "Success!", "Success");
+            }
+            catch (Exception x)
+            {
+                clsMain.con.Close();
+                clsMain.ShowMsg(x.Message, "Error", "Error");
+            }
+        }
+
+        public static void UpdateWorkDetails(int workDetailID, int fkCustomerID, DateTime date, string workDetails, decimal totalPrice, decimal paid, decimal remaining, bool isDelivered)
+        {
+            try
+            {
+                SqlCommand com = new SqlCommand("stpUpdateWorkDetails", clsMain.con); 
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@workDetailID", workDetailID);
+                com.Parameters.AddWithValue("@CustomerID", fkCustomerID);
+                com.Parameters.AddWithValue("@date", date);
+                com.Parameters.AddWithValue("@workDetails", workDetails);
+                com.Parameters.AddWithValue("@totalPrice", totalPrice);
+                com.Parameters.AddWithValue("@paid", paid);
+                com.Parameters.AddWithValue("@remaining", remaining);
+                com.Parameters.AddWithValue("@isDelivered", isDelivered);
+
+                clsMain.con.Open();
+                com.ExecuteNonQuery();
+                clsMain.con.Close();
+                clsMain.ShowMsg("Work details updated successfully!", "Success!", "Success");
             }
             catch (Exception x)
             {

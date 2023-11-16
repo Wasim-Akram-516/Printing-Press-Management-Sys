@@ -24,4 +24,6 @@ D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Wind
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.csproj.GenerateResource.Cache
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.exe
 D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.pdb
-D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.Customers.resources
+D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Dashboards.dbCustomers.resources
+D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.CustomerDetails.resources
+D:\SoftwareProjects\Media War\MediaWarPOS\MediaWarPOS\obj\Debug\MediaWarPOS.Windows.WorkDetails.resources

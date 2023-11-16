@@ -54,8 +54,6 @@
             this.errExpenseType = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dtEnd = new System.Windows.Forms.DateTimePicker();
             this.gvSNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvExpenseID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +62,8 @@
             this.gvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvReceiptName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvReceiptNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dtEnd = new System.Windows.Forms.DateTimePicker();
             this.pnlDetails.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -165,7 +165,7 @@
             this.dtStart.Location = new System.Drawing.Point(3, 87);
             this.dtStart.Name = "dtStart";
             this.dtStart.Size = new System.Drawing.Size(263, 26);
-            this.dtStart.TabIndex = 105;
+            this.dtStart.TabIndex = 0;
             // 
             // btnLoad
             // 
@@ -175,7 +175,7 @@
             this.btnLoad.Location = new System.Drawing.Point(3, 168);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(262, 36);
-            this.btnLoad.TabIndex = 106;
+            this.btnLoad.TabIndex = 2;
             this.btnLoad.Text = "LOAD";
             this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
@@ -194,7 +194,7 @@
             this.txtReceiptName.Location = new System.Drawing.Point(5, 445);
             this.txtReceiptName.Name = "txtReceiptName";
             this.txtReceiptName.Size = new System.Drawing.Size(262, 26);
-            this.txtReceiptName.TabIndex = 111;
+            this.txtReceiptName.TabIndex = 7;
             // 
             // label5
             // 
@@ -210,7 +210,7 @@
             this.txtReceiptNo.Location = new System.Drawing.Point(5, 496);
             this.txtReceiptNo.Name = "txtReceiptNo";
             this.txtReceiptNo.Size = new System.Drawing.Size(262, 26);
-            this.txtReceiptNo.TabIndex = 112;
+            this.txtReceiptNo.TabIndex = 8;
             this.txtReceiptNo.TextChanged += new System.EventHandler(this.txtReceiptNo_TextChanged);
             // 
             // dtDate
@@ -220,7 +220,7 @@
             this.dtDate.Location = new System.Drawing.Point(5, 229);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(262, 26);
-            this.dtDate.TabIndex = 107;
+            this.dtDate.TabIndex = 3;
             this.dtDate.ValueChanged += new System.EventHandler(this.dtDate_ValueChanged);
             // 
             // label9
@@ -257,7 +257,7 @@
             this.txtAmount.Location = new System.Drawing.Point(5, 395);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(262, 26);
-            this.txtAmount.TabIndex = 110;
+            this.txtAmount.TabIndex = 6;
             this.txtAmount.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             // 
             // errAmount
@@ -286,7 +286,7 @@
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(262, 45);
-            this.txtDescription.TabIndex = 109;
+            this.txtDescription.TabIndex = 5;
             this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
             // 
             // errDescription
@@ -319,7 +319,7 @@
             this.ddExpenseType.Location = new System.Drawing.Point(6, 276);
             this.ddExpenseType.Name = "ddExpenseType";
             this.ddExpenseType.Size = new System.Drawing.Size(262, 26);
-            this.ddExpenseType.TabIndex = 108;
+            this.ddExpenseType.TabIndex = 4;
             this.ddExpenseType.SelectedIndexChanged += new System.EventHandler(this.ddExpenseType_SelectedIndexChanged);
             // 
             // label6
@@ -398,23 +398,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1, 114);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 18);
-            this.label10.TabIndex = 127;
-            this.label10.Text = "To";
-            // 
-            // dtEnd
-            // 
-            this.dtEnd.CustomFormat = "";
-            this.dtEnd.Location = new System.Drawing.Point(2, 136);
-            this.dtEnd.Name = "dtEnd";
-            this.dtEnd.Size = new System.Drawing.Size(263, 26);
-            this.dtEnd.TabIndex = 126;
-            // 
             // gvSNO
             // 
             this.gvSNO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -469,6 +452,23 @@
             this.gvReceiptNo.HeaderText = "Receipt #";
             this.gvReceiptNo.Name = "gvReceiptNo";
             this.gvReceiptNo.ReadOnly = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(1, 114);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(26, 18);
+            this.label10.TabIndex = 127;
+            this.label10.Text = "To";
+            // 
+            // dtEnd
+            // 
+            this.dtEnd.CustomFormat = "";
+            this.dtEnd.Location = new System.Drawing.Point(2, 136);
+            this.dtEnd.Name = "dtEnd";
+            this.dtEnd.Size = new System.Drawing.Size(263, 26);
+            this.dtEnd.TabIndex = 1;
             // 
             // ExpensesView
             // 

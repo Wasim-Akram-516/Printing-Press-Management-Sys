@@ -93,7 +93,7 @@
             this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(251, 26);
-            this.txtName.TabIndex = 157;
+            this.txtName.TabIndex = 0;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label3
@@ -124,7 +124,7 @@
             this.txtAmount.MaxLength = 50;
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(251, 26);
-            this.txtAmount.TabIndex = 160;
+            this.txtAmount.TabIndex = 1;
             this.txtAmount.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             // 
             // label2
@@ -163,7 +163,7 @@
             this.dtDate.Location = new System.Drawing.Point(12, 189);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(251, 26);
-            this.dtDate.TabIndex = 163;
+            this.dtDate.TabIndex = 2;
             // 
             // groupBox2
             // 

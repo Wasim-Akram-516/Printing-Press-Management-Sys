@@ -35,6 +35,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gvSNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvEmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvSalaryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvPaidAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvPaymentType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvTotalPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.ddEmployee = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,18 +64,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.gvSNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvEmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSalaryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvPaidAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvPaymentType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTotalPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDetails.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -134,7 +134,7 @@
             this.dtMonth.Name = "dtMonth";
             this.dtMonth.ShowUpDown = true;
             this.dtMonth.Size = new System.Drawing.Size(259, 26);
-            this.dtMonth.TabIndex = 2;
+            this.dtMonth.TabIndex = 0;
             this.dtMonth.ValueChanged += new System.EventHandler(this.dtMonth_ValueChanged);
             // 
             // label2
@@ -206,159 +206,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Employee Name";
-            // 
-            // ddEmployee
-            // 
-            this.ddEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddEmployee.FormattingEnabled = true;
-            this.ddEmployee.Location = new System.Drawing.Point(8, 138);
-            this.ddEmployee.Name = "ddEmployee";
-            this.ddEmployee.Size = new System.Drawing.Size(259, 26);
-            this.ddEmployee.TabIndex = 5;
-            this.ddEmployee.SelectedIndexChanged += new System.EventHandler(this.ddEmployee_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 365);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 18);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Paid Amount";
-            // 
-            // txtPaidAmount
-            // 
-            this.txtPaidAmount.Location = new System.Drawing.Point(8, 387);
-            this.txtPaidAmount.Name = "txtPaidAmount";
-            this.txtPaidAmount.Size = new System.Drawing.Size(259, 26);
-            this.txtPaidAmount.TabIndex = 6;
-            this.txtPaidAmount.TextChanged += new System.EventHandler(this.txtPaidAmount_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 166);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Payment Date";
-            // 
-            // dtPaymentDate
-            // 
-            this.dtPaymentDate.CustomFormat = "";
-            this.dtPaymentDate.Location = new System.Drawing.Point(8, 187);
-            this.dtPaymentDate.Name = "dtPaymentDate";
-            this.dtPaymentDate.Size = new System.Drawing.Size(259, 26);
-            this.dtPaymentDate.TabIndex = 7;
-            // 
-            // ddPaymentType
-            // 
-            this.ddPaymentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddPaymentType.FormattingEnabled = true;
-            this.ddPaymentType.Items.AddRange(new object[] {
-            "Advance",
-            "Partial",
-            "Monthly"});
-            this.ddPaymentType.Location = new System.Drawing.Point(8, 237);
-            this.ddPaymentType.Name = "ddPaymentType";
-            this.ddPaymentType.Size = new System.Drawing.Size(259, 26);
-            this.ddPaymentType.TabIndex = 10;
-            this.ddPaymentType.SelectedIndexChanged += new System.EventHandler(this.ddPaymentType_SelectedIndexChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 215);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 18);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Payment Type";
-            // 
-            // txtRemarks
-            // 
-            this.txtRemarks.Location = new System.Drawing.Point(8, 436);
-            this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(259, 26);
-            this.txtRemarks.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 415);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 18);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Remarks";
-            // 
-            // errEmployee
-            // 
-            this.errEmployee.AutoSize = true;
-            this.errEmployee.Location = new System.Drawing.Point(250, 117);
-            this.errEmployee.Name = "errEmployee";
-            this.errEmployee.Size = new System.Drawing.Size(16, 18);
-            this.errEmployee.TabIndex = 14;
-            this.errEmployee.Text = "*";
-            // 
-            // errPaymentType
-            // 
-            this.errPaymentType.AutoSize = true;
-            this.errPaymentType.Location = new System.Drawing.Point(249, 216);
-            this.errPaymentType.Name = "errPaymentType";
-            this.errPaymentType.Size = new System.Drawing.Size(16, 18);
-            this.errPaymentType.TabIndex = 15;
-            this.errPaymentType.Text = "*";
-            // 
-            // errPaidAmount
-            // 
-            this.errPaidAmount.AutoSize = true;
-            this.errPaidAmount.Location = new System.Drawing.Point(249, 366);
-            this.errPaidAmount.Name = "errPaidAmount";
-            this.errPaidAmount.Size = new System.Drawing.Size(16, 18);
-            this.errPaidAmount.TabIndex = 16;
-            this.errPaidAmount.Text = "*";
-            // 
-            // txtTotalPaid
-            // 
-            this.txtTotalPaid.Location = new System.Drawing.Point(8, 337);
-            this.txtTotalPaid.Name = "txtTotalPaid";
-            this.txtTotalPaid.Size = new System.Drawing.Size(259, 26);
-            this.txtTotalPaid.TabIndex = 18;
-            this.txtTotalPaid.TextChanged += new System.EventHandler(this.txtTotalPaid_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 315);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 18);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Total Paid";
-            // 
-            // txtSalary
-            // 
-            this.txtSalary.Location = new System.Drawing.Point(8, 287);
-            this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(259, 26);
-            this.txtSalary.TabIndex = 20;
-            this.txtSalary.TextChanged += new System.EventHandler(this.txtSalary_TextChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 265);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 18);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Salary";
             // 
             // gvSNO
             // 
@@ -439,6 +286,159 @@
             this.gvTotalPaid.HeaderText = "Total Paid";
             this.gvTotalPaid.Name = "gvTotalPaid";
             this.gvTotalPaid.ReadOnly = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 18);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Employee Name";
+            // 
+            // ddEmployee
+            // 
+            this.ddEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddEmployee.FormattingEnabled = true;
+            this.ddEmployee.Location = new System.Drawing.Point(8, 138);
+            this.ddEmployee.Name = "ddEmployee";
+            this.ddEmployee.Size = new System.Drawing.Size(259, 26);
+            this.ddEmployee.TabIndex = 1;
+            this.ddEmployee.SelectedIndexChanged += new System.EventHandler(this.ddEmployee_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 365);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 18);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Paid Amount";
+            // 
+            // txtPaidAmount
+            // 
+            this.txtPaidAmount.Location = new System.Drawing.Point(8, 387);
+            this.txtPaidAmount.Name = "txtPaidAmount";
+            this.txtPaidAmount.Size = new System.Drawing.Size(259, 26);
+            this.txtPaidAmount.TabIndex = 6;
+            this.txtPaidAmount.TextChanged += new System.EventHandler(this.txtPaidAmount_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 166);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 18);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Payment Date";
+            // 
+            // dtPaymentDate
+            // 
+            this.dtPaymentDate.CustomFormat = "";
+            this.dtPaymentDate.Location = new System.Drawing.Point(8, 187);
+            this.dtPaymentDate.Name = "dtPaymentDate";
+            this.dtPaymentDate.Size = new System.Drawing.Size(259, 26);
+            this.dtPaymentDate.TabIndex = 2;
+            // 
+            // ddPaymentType
+            // 
+            this.ddPaymentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddPaymentType.FormattingEnabled = true;
+            this.ddPaymentType.Items.AddRange(new object[] {
+            "Advance",
+            "Partial",
+            "Monthly"});
+            this.ddPaymentType.Location = new System.Drawing.Point(8, 237);
+            this.ddPaymentType.Name = "ddPaymentType";
+            this.ddPaymentType.Size = new System.Drawing.Size(259, 26);
+            this.ddPaymentType.TabIndex = 3;
+            this.ddPaymentType.SelectedIndexChanged += new System.EventHandler(this.ddPaymentType_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 215);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 18);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Payment Type";
+            // 
+            // txtRemarks
+            // 
+            this.txtRemarks.Location = new System.Drawing.Point(8, 436);
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(259, 26);
+            this.txtRemarks.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 415);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 18);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Remarks";
+            // 
+            // errEmployee
+            // 
+            this.errEmployee.AutoSize = true;
+            this.errEmployee.Location = new System.Drawing.Point(250, 117);
+            this.errEmployee.Name = "errEmployee";
+            this.errEmployee.Size = new System.Drawing.Size(16, 18);
+            this.errEmployee.TabIndex = 14;
+            this.errEmployee.Text = "*";
+            // 
+            // errPaymentType
+            // 
+            this.errPaymentType.AutoSize = true;
+            this.errPaymentType.Location = new System.Drawing.Point(249, 216);
+            this.errPaymentType.Name = "errPaymentType";
+            this.errPaymentType.Size = new System.Drawing.Size(16, 18);
+            this.errPaymentType.TabIndex = 15;
+            this.errPaymentType.Text = "*";
+            // 
+            // errPaidAmount
+            // 
+            this.errPaidAmount.AutoSize = true;
+            this.errPaidAmount.Location = new System.Drawing.Point(249, 366);
+            this.errPaidAmount.Name = "errPaidAmount";
+            this.errPaidAmount.Size = new System.Drawing.Size(16, 18);
+            this.errPaidAmount.TabIndex = 16;
+            this.errPaidAmount.Text = "*";
+            // 
+            // txtTotalPaid
+            // 
+            this.txtTotalPaid.Location = new System.Drawing.Point(8, 337);
+            this.txtTotalPaid.Name = "txtTotalPaid";
+            this.txtTotalPaid.Size = new System.Drawing.Size(259, 26);
+            this.txtTotalPaid.TabIndex = 5;
+            this.txtTotalPaid.TextChanged += new System.EventHandler(this.txtTotalPaid_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 315);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 18);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Total Paid";
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.Location = new System.Drawing.Point(8, 287);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(259, 26);
+            this.txtSalary.TabIndex = 4;
+            this.txtSalary.TextChanged += new System.EventHandler(this.txtSalary_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(5, 265);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 18);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Salary";
             // 
             // Salaries
             // 

@@ -165,11 +165,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_9D4D495097CDFAB90DFEE109F1831A58"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -256,15 +251,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Media WAR Mangement Software"
-        "ProductCode" = "8:{EEF0A973-7406-4109-B459-9F182EE11255}"
-        "PackageCode" = "8:{D6B06C60-B1F8-452E-AB5F-C7791E17668C}"
+        "ProductCode" = "8:{A83BF15B-4088-4108-84F7-233095987B76}"
+        "PackageCode" = "8:{49167ECB-D619-45F3-99C0-6E939404D1B7}"
         "UpgradeCode" = "8:{BCAEF3D0-E863-4336-9059-234139E30DA3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.0.4"
         "Manufacturer" = "8:WA Digital Solutions"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

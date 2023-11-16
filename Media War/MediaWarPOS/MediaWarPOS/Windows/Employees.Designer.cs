@@ -212,7 +212,7 @@
             this.dtLeftDate.Location = new System.Drawing.Point(12, 437);
             this.dtLeftDate.Name = "dtLeftDate";
             this.dtLeftDate.Size = new System.Drawing.Size(250, 26);
-            this.dtLeftDate.TabIndex = 8;
+            this.dtLeftDate.TabIndex = 7;
             // 
             // label14
             // 
@@ -232,7 +232,7 @@
             this.dtJoinDate.Location = new System.Drawing.Point(12, 389);
             this.dtJoinDate.Name = "dtJoinDate";
             this.dtJoinDate.Size = new System.Drawing.Size(250, 26);
-            this.dtJoinDate.TabIndex = 7;
+            this.dtJoinDate.TabIndex = 6;
             // 
             // ddStatus
             // 
@@ -245,7 +245,7 @@
             this.ddStatus.Location = new System.Drawing.Point(12, 340);
             this.ddStatus.Name = "ddStatus";
             this.ddStatus.Size = new System.Drawing.Size(250, 26);
-            this.ddStatus.TabIndex = 6;
+            this.ddStatus.TabIndex = 5;
             this.ddStatus.SelectedIndexChanged += new System.EventHandler(this.ddStatus_SelectedIndexChanged);
             // 
             // txtPhone2

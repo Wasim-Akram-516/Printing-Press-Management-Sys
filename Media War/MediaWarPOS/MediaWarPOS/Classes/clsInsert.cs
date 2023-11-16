@@ -247,26 +247,49 @@ namespace MediaWarPOS.Classes
             }
             return st;
         }
-        public static void InsertCustomers(string name, string phone1, string phone2, DateTime date, string workDetails, decimal totalPrice, decimal paid, decimal remaining)
+        public static void InsertCustomerDetails(string name, string phone1, string phone2)
         {
             try
             {
-                SqlCommand com = new SqlCommand("stpAddCustomers", clsMain.con);
+                SqlCommand com = new SqlCommand("stpAddCustomerDetails", clsMain.con);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("@name", name);
                 com.Parameters.AddWithValue("@phone1", phone1);
-                if (phone2 != null)
+                if (!string.IsNullOrEmpty(phone2))
                     com.Parameters.AddWithValue("@phone2", phone2);
-                com.Parameters.AddWithValue("@date", date);
-                com.Parameters.AddWithValue("@workDetails", workDetails);
-                com.Parameters.AddWithValue("@totalPrice", totalPrice);
-                com.Parameters.AddWithValue("@paid", paid);
-                com.Parameters.AddWithValue("@remaining", remaining);
+                else
+                    com.Parameters.AddWithValue("@phone2", DBNull.Value);
 
                 clsMain.con.Open();
                 com.ExecuteNonQuery();
                 clsMain.con.Close();
                 clsMain.ShowMsg(name + " added successfully!", "Success!", "Success");
+            }
+            catch (Exception x)
+            {
+                clsMain.con.Close();
+                clsMain.ShowMsg(x.Message, "Error", "Error");
+            }
+        }
+
+        public static void AddWorkDetails(int fkCustomerID, DateTime date, string workDetails, decimal totalPrice, decimal paid, decimal remaining, bool isDelivered)
+        {
+            try
+            {
+                SqlCommand com = new SqlCommand("stpAddWorkDetails", clsMain.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@fkCustomerID", fkCustomerID);
+                com.Parameters.AddWithValue("@date", date);
+                com.Parameters.AddWithValue("@workDetails", workDetails);
+                com.Parameters.AddWithValue("@totalPrice", totalPrice);
+                com.Parameters.AddWithValue("@paid", paid);
+                com.Parameters.AddWithValue("@remaining", remaining);
+                com.Parameters.AddWithValue("@isDelivered", isDelivered);
+
+                clsMain.con.Open();
+                com.ExecuteNonQuery();
+                clsMain.con.Close();
+                clsMain.ShowMsg("Work details added successfully!", "Success!", "Success");
             }
             catch (Exception x)
             {

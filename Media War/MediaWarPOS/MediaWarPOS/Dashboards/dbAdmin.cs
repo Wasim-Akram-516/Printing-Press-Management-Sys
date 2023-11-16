@@ -107,7 +107,7 @@ namespace MediaWarPOS.Dashboards
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            Windows.Customers obj = new Windows.Customers();
+            dbCustomers obj = new dbCustomers();
             Classes.clsMain.ShowWindow(obj, this, MDI.ActiveForm);
         }
     }

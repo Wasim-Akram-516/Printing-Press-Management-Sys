@@ -117,7 +117,7 @@
             this.ddStatus.Location = new System.Drawing.Point(12, 140);
             this.ddStatus.Name = "ddStatus";
             this.ddStatus.Size = new System.Drawing.Size(253, 26);
-            this.ddStatus.TabIndex = 10;
+            this.ddStatus.TabIndex = 1;
             this.ddStatus.SelectedIndexChanged += new System.EventHandler(this.ddStatus_SelectedIndexChanged);
             // 
             // txtProdCatName
@@ -125,7 +125,7 @@
             this.txtProdCatName.Location = new System.Drawing.Point(12, 90);
             this.txtProdCatName.Name = "txtProdCatName";
             this.txtProdCatName.Size = new System.Drawing.Size(253, 26);
-            this.txtProdCatName.TabIndex = 9;
+            this.txtProdCatName.TabIndex = 0;
             this.txtProdCatName.TextChanged += new System.EventHandler(this.txtProdCatName_TextChanged);
             // 
             // label2

@@ -92,7 +92,7 @@
             this.txtStockCatName.Location = new System.Drawing.Point(12, 90);
             this.txtStockCatName.Name = "txtStockCatName";
             this.txtStockCatName.Size = new System.Drawing.Size(253, 26);
-            this.txtStockCatName.TabIndex = 3;
+            this.txtStockCatName.TabIndex = 0;
             this.txtStockCatName.TextChanged += new System.EventHandler(this.txtStockCatName_TextChanged);
             // 
             // ddStatus
@@ -105,7 +105,7 @@
             this.ddStatus.Location = new System.Drawing.Point(12, 140);
             this.ddStatus.Name = "ddStatus";
             this.ddStatus.Size = new System.Drawing.Size(253, 26);
-            this.ddStatus.TabIndex = 4;
+            this.ddStatus.TabIndex = 1;
             this.ddStatus.SelectedIndexChanged += new System.EventHandler(this.ddStatus_SelectedIndexChanged);
             // 
             // errStockCatName
